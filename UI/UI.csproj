@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\DefaultHash.cs" />
+    <Compile Include="Algorithm\HashProcesser.cs" />
+    <Compile Include="HashControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HashControl.Designer.cs">
+      <DependentUpon>HashControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HashControl.resx">
+      <DependentUpon>HashControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainDialog.resx">
       <DependentUpon>MainDialog.cs</DependentUpon>
     </EmbeddedResource>
