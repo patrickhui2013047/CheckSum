@@ -18,12 +18,21 @@ namespace UI
         const bool NoMoreHashAllowed = true;
         string InputString = "";
         Stream InputStream { get; set; }
+
+        HashControl MD5Field;
         List<HashProcesser> HashList = new List<HashProcesser>();
         public MainDialog()
         {
             InitializeComponent();
+            //custom control setting
+            MD5Field = new HashControl("MD5");
+            
+            
+            
+            //FileDialog setting
             FileBrowseDialog.CheckFileExists = true;
             FileBrowseDialog.CheckPathExists = true;
+            //Hash Algorithm loading
             HashList.Add(new MD5());
             HashList.Add(new SHA1());
             HashList.Add(new SHA256());
@@ -77,7 +86,7 @@ namespace UI
 
         private void MainDialog_Load(object sender, EventArgs e)
         {
-
+            //flowLayoutPanel1.Controls.Add(MD5Field);
         }
         //TODO:Add verify button
         #region Button Clicked

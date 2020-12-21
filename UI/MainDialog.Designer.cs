@@ -29,12 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDialog));
+            this.StatusBar = new System.Windows.Forms.StatusStrip();
+            this.HashPanel = new System.Windows.Forms.Panel();
+            this.Hashtable = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.HashButton = new System.Windows.Forms.Button();
+            this.HashTextbox = new System.Windows.Forms.TextBox();
+            this.FileBrowseDialog = new System.Windows.Forms.OpenFileDialog();
+            this.FilePanel = new System.Windows.Forms.Panel();
             this.FileTable = new System.Windows.Forms.TableLayoutPanel();
             this.FileButton = new System.Windows.Forms.Button();
             this.FileTextbox = new System.Windows.Forms.TextBox();
             this.FileLabel = new System.Windows.Forms.Label();
-            this.FilePanel = new System.Windows.Forms.Panel();
-            this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.TextPanel = new System.Windows.Forms.Panel();
             this.TextTable = new System.Windows.Forms.TableLayoutPanel();
             this.TextCheckBox = new System.Windows.Forms.CheckBox();
@@ -60,16 +66,10 @@
             this.SHA512CheckBox = new System.Windows.Forms.CheckBox();
             this.SHA512Button = new System.Windows.Forms.Button();
             this.SHA512Textbox = new System.Windows.Forms.TextBox();
-            this.HashPanel = new System.Windows.Forms.Panel();
-            this.Hashtable = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.HashButton = new System.Windows.Forms.Button();
-            this.HashTextbox = new System.Windows.Forms.TextBox();
-            this.FileBrowseDialog = new System.Windows.Forms.OpenFileDialog();
-            this.hashControl1 = new HashControl();
-            this.hashControl2 = new HashControl();
-            this.FileTable.SuspendLayout();
+            this.HashPanel.SuspendLayout();
+            this.Hashtable.SuspendLayout();
             this.FilePanel.SuspendLayout();
+            this.FileTable.SuspendLayout();
             this.TextPanel.SuspendLayout();
             this.TextTable.SuspendLayout();
             this.MD5Panel.SuspendLayout();
@@ -80,9 +80,50 @@
             this.SHA256Table.SuspendLayout();
             this.SHA512Panel.SuspendLayout();
             this.SHA512Table.SuspendLayout();
-            this.HashPanel.SuspendLayout();
-            this.Hashtable.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // StatusBar
+            // 
+            this.StatusBar.ImageScalingSize = new System.Drawing.Size(24, 24);
+            resources.ApplyResources(this.StatusBar, "StatusBar");
+            this.StatusBar.Name = "StatusBar";
+            // 
+            // HashPanel
+            // 
+            this.HashPanel.Controls.Add(this.Hashtable);
+            resources.ApplyResources(this.HashPanel, "HashPanel");
+            this.HashPanel.Name = "HashPanel";
+            // 
+            // Hashtable
+            // 
+            resources.ApplyResources(this.Hashtable, "Hashtable");
+            this.Hashtable.Controls.Add(this.label1, 0, 0);
+            this.Hashtable.Controls.Add(this.HashButton, 2, 0);
+            this.Hashtable.Controls.Add(this.HashTextbox, 1, 0);
+            this.Hashtable.Name = "Hashtable";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // HashButton
+            // 
+            resources.ApplyResources(this.HashButton, "HashButton");
+            this.HashButton.Name = "HashButton";
+            this.HashButton.UseVisualStyleBackColor = false;
+            this.HashButton.Click += new System.EventHandler(this.HashButton_Click);
+            // 
+            // HashTextbox
+            // 
+            resources.ApplyResources(this.HashTextbox, "HashTextbox");
+            this.HashTextbox.Name = "HashTextbox";
+            // 
+            // FilePanel
+            // 
+            this.FilePanel.Controls.Add(this.FileTable);
+            resources.ApplyResources(this.FilePanel, "FilePanel");
+            this.FilePanel.Name = "FilePanel";
             // 
             // FileTable
             // 
@@ -110,18 +151,6 @@
             resources.ApplyResources(this.FileLabel, "FileLabel");
             this.FileLabel.Name = "FileLabel";
             // 
-            // FilePanel
-            // 
-            this.FilePanel.Controls.Add(this.FileTable);
-            resources.ApplyResources(this.FilePanel, "FilePanel");
-            this.FilePanel.Name = "FilePanel";
-            // 
-            // StatusBar
-            // 
-            this.StatusBar.ImageScalingSize = new System.Drawing.Size(24, 24);
-            resources.ApplyResources(this.StatusBar, "StatusBar");
-            this.StatusBar.Name = "StatusBar";
-            // 
             // TextPanel
             // 
             this.TextPanel.Controls.Add(this.TextTable);
@@ -141,7 +170,6 @@
             resources.ApplyResources(this.TextCheckBox, "TextCheckBox");
             this.TextCheckBox.Name = "TextCheckBox";
             this.TextCheckBox.UseVisualStyleBackColor = true;
-            this.TextCheckBox.CheckedChanged += new System.EventHandler(this.TextCheckBox_CheckedChanged);
             // 
             // TextButton
             // 
@@ -190,7 +218,6 @@
             this.MD5CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MD5CheckBox.Name = "MD5CheckBox";
             this.MD5CheckBox.UseVisualStyleBackColor = true;
-            this.MD5CheckBox.CheckedChanged += new System.EventHandler(this.MD5CheckBox_CheckedChanged);
             // 
             // SHA1Panel
             // 
@@ -213,7 +240,6 @@
             this.SHA1CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SHA1CheckBox.Name = "SHA1CheckBox";
             this.SHA1CheckBox.UseVisualStyleBackColor = true;
-            this.SHA1CheckBox.CheckedChanged += new System.EventHandler(this.SHA1CheckBox_CheckedChanged);
             // 
             // SHA1Button
             // 
@@ -249,7 +275,6 @@
             this.SHA256CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SHA256CheckBox.Name = "SHA256CheckBox";
             this.SHA256CheckBox.UseVisualStyleBackColor = true;
-            this.SHA256CheckBox.CheckedChanged += new System.EventHandler(this.SHA256CheckBox_CheckedChanged);
             // 
             // SHA256Button
             // 
@@ -285,7 +310,6 @@
             this.SHA512CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SHA512CheckBox.Name = "SHA512CheckBox";
             this.SHA512CheckBox.UseVisualStyleBackColor = true;
-            this.SHA512CheckBox.CheckedChanged += new System.EventHandler(this.SHA512CheckBox_CheckedChanged);
             // 
             // SHA512Button
             // 
@@ -300,63 +324,18 @@
             this.SHA512Textbox.Name = "SHA512Textbox";
             this.SHA512Textbox.ReadOnly = true;
             // 
-            // HashPanel
-            // 
-            this.HashPanel.Controls.Add(this.Hashtable);
-            resources.ApplyResources(this.HashPanel, "HashPanel");
-            this.HashPanel.Name = "HashPanel";
-            // 
-            // Hashtable
-            // 
-            resources.ApplyResources(this.Hashtable, "Hashtable");
-            this.Hashtable.Controls.Add(this.label1, 0, 0);
-            this.Hashtable.Controls.Add(this.HashButton, 2, 0);
-            this.Hashtable.Controls.Add(this.HashTextbox, 1, 0);
-            this.Hashtable.Name = "Hashtable";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // HashButton
-            // 
-            resources.ApplyResources(this.HashButton, "HashButton");
-            this.HashButton.Name = "HashButton";
-            this.HashButton.UseVisualStyleBackColor = false;
-            this.HashButton.Click += new System.EventHandler(this.HashButton_Click);
-            // 
-            // HashTextbox
-            // 
-            resources.ApplyResources(this.HashTextbox, "HashTextbox");
-            this.HashTextbox.Name = "HashTextbox";
-            // 
-            // hashControl2
-            // 
-            resources.ApplyResources(this.hashControl2, "hashControl2");
-            this.hashControl2.Name = "hashControl2";
-            this.hashControl2.SetName("2");
-            // 
-            // hashControl1
-            // 
-            resources.ApplyResources(this.hashControl1, "hashControl1");
-            this.hashControl1.Name = "hashControl1";
-            this.hashControl1.SetName("1");
-            // 
             // MainDialog
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.hashControl1);
-            this.Controls.Add(this.hashControl2);
-            this.Controls.Add(this.HashPanel);
             this.Controls.Add(this.SHA512Panel);
             this.Controls.Add(this.SHA256Panel);
             this.Controls.Add(this.SHA1Panel);
             this.Controls.Add(this.MD5Panel);
             this.Controls.Add(this.TextPanel);
             this.Controls.Add(this.FilePanel);
+            this.Controls.Add(this.HashPanel);
             this.Controls.Add(this.StatusBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -365,9 +344,12 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Load += new System.EventHandler(this.MainDialog_Load);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainDialog_DragEnter);
+            this.HashPanel.ResumeLayout(false);
+            this.Hashtable.ResumeLayout(false);
+            this.Hashtable.PerformLayout();
+            this.FilePanel.ResumeLayout(false);
             this.FileTable.ResumeLayout(false);
             this.FileTable.PerformLayout();
-            this.FilePanel.ResumeLayout(false);
             this.TextPanel.ResumeLayout(false);
             this.TextTable.ResumeLayout(false);
             this.TextTable.PerformLayout();
@@ -383,55 +365,49 @@
             this.SHA512Panel.ResumeLayout(false);
             this.SHA512Table.ResumeLayout(false);
             this.SHA512Table.PerformLayout();
-            this.HashPanel.ResumeLayout(false);
-            this.Hashtable.ResumeLayout(false);
-            this.Hashtable.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel FilePanel;
         private System.Windows.Forms.StatusStrip StatusBar;
+        private System.Windows.Forms.Panel HashPanel;
+        private System.Windows.Forms.TableLayoutPanel Hashtable;
+        private System.Windows.Forms.Button HashButton;
+        private System.Windows.Forms.TextBox HashTextbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.OpenFileDialog FileBrowseDialog;
+        private System.Windows.Forms.Panel FilePanel;
         private System.Windows.Forms.TableLayoutPanel FileTable;
         private System.Windows.Forms.Button FileButton;
         private System.Windows.Forms.TextBox FileTextbox;
+        private System.Windows.Forms.Label FileLabel;
         private System.Windows.Forms.Panel TextPanel;
         private System.Windows.Forms.TableLayoutPanel TextTable;
+        private System.Windows.Forms.CheckBox TextCheckBox;
         private System.Windows.Forms.Button TextButton;
         private System.Windows.Forms.TextBox TextTextbox;
         private System.Windows.Forms.Panel MD5Panel;
         private System.Windows.Forms.TableLayoutPanel MD5Table;
         private System.Windows.Forms.Button MD5Button;
         private System.Windows.Forms.TextBox MD5Textbox;
+        private System.Windows.Forms.CheckBox MD5CheckBox;
         private System.Windows.Forms.Panel SHA1Panel;
         private System.Windows.Forms.TableLayoutPanel SHA1Table;
+        private System.Windows.Forms.CheckBox SHA1CheckBox;
         private System.Windows.Forms.Button SHA1Button;
         private System.Windows.Forms.TextBox SHA1Textbox;
         private System.Windows.Forms.Panel SHA256Panel;
         private System.Windows.Forms.TableLayoutPanel SHA256Table;
+        private System.Windows.Forms.CheckBox SHA256CheckBox;
         private System.Windows.Forms.Button SHA256Button;
         private System.Windows.Forms.TextBox SHA256Textbox;
         private System.Windows.Forms.Panel SHA512Panel;
         private System.Windows.Forms.TableLayoutPanel SHA512Table;
+        private System.Windows.Forms.CheckBox SHA512CheckBox;
         private System.Windows.Forms.Button SHA512Button;
         private System.Windows.Forms.TextBox SHA512Textbox;
-        private System.Windows.Forms.Panel HashPanel;
-        private System.Windows.Forms.TableLayoutPanel Hashtable;
-        private System.Windows.Forms.Button HashButton;
-        private System.Windows.Forms.TextBox HashTextbox;
-        private System.Windows.Forms.Label FileLabel;
-        private System.Windows.Forms.CheckBox MD5CheckBox;
-        private System.Windows.Forms.CheckBox TextCheckBox;
-        private System.Windows.Forms.CheckBox SHA1CheckBox;
-        private System.Windows.Forms.CheckBox SHA256CheckBox;
-        private System.Windows.Forms.CheckBox SHA512CheckBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.OpenFileDialog FileBrowseDialog;
-        private HashControl hashControl2;
-        private HashControl hashControl1;
     }
 }
 

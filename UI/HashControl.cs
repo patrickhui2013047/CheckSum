@@ -33,7 +33,7 @@ namespace UI
 
         private void UpdateHandler()
         {
-            Check.Text = HashName;
+            Check.Text = HashName+":";
             Button.Text = "Copy " + HashName;
             Check.Checked = HashEnable;
             Text.Enabled = HashEnable;
