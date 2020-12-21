@@ -96,11 +96,13 @@
             // 
             // HashControl
             // 
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.PanelTable);
             this.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(0, 30);
-            this.MinimumSize = new System.Drawing.Size(0, 30);
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.MaximumSize = new System.Drawing.Size(523, 30);
+            this.MinimumSize = new System.Drawing.Size(523, 30);
             this.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Size = new System.Drawing.Size(523, 30);
             this.PanelTable.ResumeLayout(false);
@@ -112,7 +114,7 @@
         #endregion
 
         private System.Windows.Forms.CheckBox Check;
-        private System.Windows.Forms.TextBox Text;
+        private new System.Windows.Forms.TextBox Text;
         private System.Windows.Forms.Button Button;
         private System.Windows.Forms.TableLayoutPanel PanelTable;
     }

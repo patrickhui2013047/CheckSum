@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace UI
 {
@@ -6,6 +7,7 @@ namespace UI
     {
         public string HashName { get; private set; }
         public bool HashEnable { get; private set; }
+        public Func<string,bool,bool> CheckChanged;
         public HashControl()
         {
             InitializeComponent();
@@ -31,6 +33,11 @@ namespace UI
             UpdateHandler();
         }
 
+        public void SetText(string text)
+        {
+            Text.Text = text;
+        }
+
         private void UpdateHandler()
         {
             Check.Text = HashName+":";
@@ -45,6 +52,8 @@ namespace UI
             HashEnable = Check.Checked;
             Text.Enabled = Check.Checked;
             Button.Enabled = Check.Checked;
+            CheckChanged?.Invoke(HashName,Check.Checked);
+
 
         }
 

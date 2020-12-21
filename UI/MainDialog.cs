@@ -19,16 +19,32 @@ namespace UI
         string InputString = "";
         Stream InputStream { get; set; }
 
+        Task.Progress Progress { get; set; }
         HashControl MD5Field;
+        HashControl SHA1Field;
+        HashControl SHA256Field;
+        HashControl SHA512Field;
         List<HashProcesser> HashList = new List<HashProcesser>();
+
+
+
         public MainDialog()
         {
             InitializeComponent();
             //custom control setting
             MD5Field = new HashControl("MD5");
-            
-            
-            
+            MD5Field.CheckChanged += ChangeHandler;
+            HashContainer.Controls.Add(MD5Field);
+            SHA1Field = new HashControl("SHA-1");
+            SHA1Field.CheckChanged += ChangeHandler;
+            HashContainer.Controls.Add(SHA1Field);
+            SHA256Field = new HashControl("SHA-256");
+            SHA256Field.CheckChanged += ChangeHandler;
+            HashContainer.Controls.Add(SHA256Field);
+            SHA512Field = new HashControl("SHA-512");
+            SHA512Field.CheckChanged += ChangeHandler;
+            HashContainer.Controls.Add(SHA512Field);
+
             //FileDialog setting
             FileBrowseDialog.CheckFileExists = true;
             FileBrowseDialog.CheckPathExists = true;
@@ -38,44 +54,84 @@ namespace UI
             HashList.Add(new SHA256());
             HashList.Add(new SHA512());
         }
-
+        
         public void Execute()
         {
-            foreach(HashProcesser processer in HashList.Where(arg => arg.Enable))
+            StatusBarProgress.Maximum = HashList.Where(arg => arg.Enable).Count();
+            StatusBarProgress.Value = 0;
+            StatusBarText.Text = "Checking";
+            if (!TextCheckBox.Checked)
             {
-                processer.Run(InputStream);
-                switch (processer.Name)
+                try
                 {
-                    case "MD5":
-                        MD5Textbox.Text = processer.OutString;
-                        break;
-                    case "SHA-1":
-                        SHA1Textbox.Text = processer.OutString;
-                        break;
-                    case "SHA-256":
-                        SHA256Textbox.Text = processer.OutString;
-                        break;
-                    case "SHA-512":
-                        SHA512Textbox.Text = processer.OutString;
-                        break;
-                    
-                    default:
-                        if (NoMoreHashAllowed)
-                        {
-                            throw new Exception("Unknown Hash Algorithm is processed\n" + processer.Name);
-                        }
-                        break;
+                    InputStream = new FileStream(FileTextbox.Text.ToString(), FileMode.Open, FileAccess.Read);
+                }catch(ArgumentException e)
+                {
+                    MessageBox.Show("Invaild file path. Please select a vaild file.\n"+e.Message);
+                    return;
                 }
+            }
+            else
+            {
+                InputStream = new MemoryStream(Encoding.ASCII.GetBytes(TextTextbox.Text));
+            }
+            foreach (HashProcesser processer in HashList.Where(arg => arg.Enable))
+            {
+                
+                foreach(HashControl field in HashContainer.Controls)
+                {
+                    processer.Run(InputStream);
+                    if (field.HashEnable && (field.HashName == processer.Name))
+                    {
+                        field.SetText(processer.OutString);
+                        break;
+                    }else if (!field.HashEnable)
+                    {
+                        field.SetText("");
+                    }
+                }
+                StatusBarProgress.Value += 1;
                 InputStream.Position = 0;
             }
+            StatusBarText.Text = "Completed";
         }
 
+        private void Verify()
+        {
+            StatusBarProgress.Maximum = HashList.Where(arg => arg.Enable).Count();
+            StatusBarProgress.Value = 0;
+            StatusBarText.Text = "Verifying";
+            foreach (HashProcesser processer in HashList.Where(arg => arg.Enable))
+            {
+                if (HashTextbox.Text == processer.OutString)
+                {
+                    MessageBox.Show(processer.Name + " matched.");
+                }
+            }
+            StatusBarText.Text = "Verifying";
+        }
+
+        public bool ChangeHandler(string name,bool check)
+        {
+            foreach(HashProcesser processer in HashList)
+            {
+                if (name == processer.Name)
+                {
+                    processer.Enable = check;
+                }
+            }
+
+
+            return true;
+        }
+        
         //TODO:Drag&Drop fuction waiting
         private void MainDialog_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 e.Effect = DragDropEffects.Copy;
+                var data = e.Data;
             }
             else
             {
@@ -84,11 +140,18 @@ namespace UI
             }
         }
 
+        void MainDialog_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            FileTextbox.Text = files[0];
+            Execute();
+        }
+
         private void MainDialog_Load(object sender, EventArgs e)
         {
-            //flowLayoutPanel1.Controls.Add(MD5Field);
+            
         }
-        //TODO:Add verify button
+
         #region Button Clicked
         private void FileButton_Click(object sender, EventArgs e)
         {
@@ -96,18 +159,23 @@ namespace UI
             {
                 FileTextbox.Text=FileBrowseDialog.FileName;
             }
-            if (!TextCheckBox.Checked)
-            {
-                InputStream= new FileStream(FileTextbox.Text.ToString(), FileMode.Open, FileAccess.Read);
-                Execute();
-            }
-            
+          
         }
-        
-        private void MD5Button_Click(object sender, EventArgs e)
+
+        private void ControlButton_Check_Click(object sender, EventArgs e)
         {
-            MD5Textbox.SelectAll();
-            MD5Textbox.Copy();
+            Execute();
+        }
+
+        private void ControlButton_Verify_Click(object sender, EventArgs e)
+        {
+            Verify();
+        }
+
+        private void ControlButton_Both_Click(object sender, EventArgs e)
+        {
+            Execute();
+            Verify();
         }
 
         private void TextButton_Click(object sender, EventArgs e)
@@ -115,31 +183,10 @@ namespace UI
             TextTextbox.Text = Clipboard.GetText();
         }
 
-        private void SHA1Button_Click(object sender, EventArgs e)
-        {
-            SHA1Textbox.SelectAll();
-            SHA1Textbox.Copy();
-        }
-
-        private void SHA256Button_Click(object sender, EventArgs e)
-        {
-            SHA256Textbox.SelectAll();
-            SHA256Textbox.Copy();
-        }
-
-        private void SHA512Button_Click(object sender, EventArgs e)
-        {
-            SHA512Textbox.SelectAll();
-            SHA512Textbox.Copy();
-        }
-
         private void HashButton_Click(object sender, EventArgs e)
         {
-            HashTextbox.SelectAll();
             HashTextbox.Text = Clipboard.GetText();
         }
-
-       
 
         #endregion
 
@@ -152,29 +199,8 @@ namespace UI
             TextTextbox.Enabled = TextCheckBox.Checked;
         }
 
-        private void MD5CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            MD5Textbox.Enabled = MD5CheckBox.Checked;
-            MD5Button.Enabled = MD5CheckBox.Checked;
-        }
-
-        private void SHA1CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            SHA1Textbox.Enabled = SHA1CheckBox.Checked;
-            SHA1Button.Enabled = SHA1CheckBox.Checked;
-        }
-
-        private void SHA256CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            SHA256Textbox.Enabled = SHA256CheckBox.Checked;
-            SHA256Button.Enabled = SHA256CheckBox.Checked;
-        }
-
-        private void SHA512CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            SHA512Textbox.Enabled = SHA512CheckBox.Checked;
-            SHA512Button.Enabled = SHA512CheckBox.Checked;
-        }
         #endregion
+
+        
     }
 }

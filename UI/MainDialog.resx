@@ -148,7 +148,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
+  </data>
+  <data name="StatusBarProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="StatusBarText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 17</value>
   </data>
   <data name="&gt;&gt;Hashtable.Name" xml:space="preserve">
     <value>Hashtable</value>
@@ -199,7 +205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;HashPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="Hashtable.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -378,11 +384,131 @@
   <metadata name="FileBrowseDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
+  <data name="&gt;&gt;FileTable.Name" xml:space="preserve">
+    <value>FileTable</value>
+  </data>
+  <data name="&gt;&gt;FileTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileTable.Parent" xml:space="preserve">
+    <value>FilePanel</value>
+  </data>
+  <data name="&gt;&gt;FileTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FileTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FileButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="FileTextbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FileLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="FilePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="FilePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="FilePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="FilePanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="FilePanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="FilePanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 1, 3, 1</value>
+  </data>
+  <data name="FilePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>523, 30</value>
+  </data>
+  <data name="FilePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;FilePanel.Name" xml:space="preserve">
+    <value>FilePanel</value>
+  </data>
+  <data name="&gt;&gt;FilePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FilePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FilePanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="FileTable.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="FileTable.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;FileButton.Name" xml:space="preserve">
+    <value>FileButton</value>
+  </data>
+  <data name="&gt;&gt;FileButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileButton.Parent" xml:space="preserve">
+    <value>FileTable</value>
+  </data>
+  <data name="&gt;&gt;FileButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FileTextbox.Name" xml:space="preserve">
+    <value>FileTextbox</value>
+  </data>
+  <data name="&gt;&gt;FileTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileTextbox.Parent" xml:space="preserve">
+    <value>FileTable</value>
+  </data>
+  <data name="&gt;&gt;FileTextbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.Name" xml:space="preserve">
+    <value>FileLabel</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.Parent" xml:space="preserve">
+    <value>FileTable</value>
+  </data>
+  <data name="&gt;&gt;FileLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FileTable.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="FileTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 1</value>
+  </data>
+  <data name="FileTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="FileTable.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="FileTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>517, 28</value>
+  </data>
+  <data name="FileTable.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FileTable.Name" xml:space="preserve">
+    <value>FileTable</value>
+  </data>
+  <data name="&gt;&gt;FileTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileTable.Parent" xml:space="preserve">
+    <value>FilePanel</value>
+  </data>
+  <data name="&gt;&gt;FileTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FileTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FileButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="FileTextbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FileLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="FileButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -486,80 +612,131 @@
   <data name="&gt;&gt;FileLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="FileTable.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;TextTable.Name" xml:space="preserve">
+    <value>TextTable</value>
   </data>
-  <data name="FileTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 1</value>
-  </data>
-  <data name="FileTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="FileTable.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="FileTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>517, 28</value>
-  </data>
-  <data name="FileTable.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;FileTable.Name" xml:space="preserve">
-    <value>FileTable</value>
-  </data>
-  <data name="&gt;&gt;FileTable.Type" xml:space="preserve">
+  <data name="&gt;&gt;TextTable.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FileTable.Parent" xml:space="preserve">
-    <value>FilePanel</value>
+  <data name="&gt;&gt;TextTable.Parent" xml:space="preserve">
+    <value>TextPanel</value>
   </data>
-  <data name="&gt;&gt;FileTable.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;TextTable.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="FileTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FileButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="FileTextbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FileLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="TextTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TextCheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="TextButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextTextbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="FilePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="TextPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="FilePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="TextPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
   </data>
-  <data name="FilePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="TextPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="FilePanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="TextPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 30</value>
   </data>
-  <data name="FilePanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="TextPanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 30</value>
   </data>
-  <data name="FilePanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="TextPanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 1, 3, 1</value>
   </data>
-  <data name="FilePanel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="TextPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>523, 30</value>
   </data>
-  <data name="FilePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="TextPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
-  <data name="&gt;&gt;FilePanel.Name" xml:space="preserve">
-    <value>FilePanel</value>
+  <data name="&gt;&gt;TextPanel.Name" xml:space="preserve">
+    <value>TextPanel</value>
   </data>
-  <data name="&gt;&gt;FilePanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;TextPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FilePanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;TextPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;FilePanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;TextPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="TextTable.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="TextTable.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;TextCheckBox.Name" xml:space="preserve">
+    <value>TextCheckBox</value>
+  </data>
+  <data name="&gt;&gt;TextCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextCheckBox.Parent" xml:space="preserve">
+    <value>TextTable</value>
+  </data>
+  <data name="&gt;&gt;TextCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextButton.Name" xml:space="preserve">
+    <value>TextButton</value>
+  </data>
+  <data name="&gt;&gt;TextButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextButton.Parent" xml:space="preserve">
+    <value>TextTable</value>
+  </data>
+  <data name="&gt;&gt;TextButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TextTextbox.Name" xml:space="preserve">
+    <value>TextTextbox</value>
+  </data>
+  <data name="&gt;&gt;TextTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextTextbox.Parent" xml:space="preserve">
+    <value>TextTable</value>
+  </data>
+  <data name="&gt;&gt;TextTextbox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TextTable.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TextTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 1</value>
+  </data>
+  <data name="TextTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TextTable.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TextTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>517, 28</value>
+  </data>
+  <data name="TextTable.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextTable.Name" xml:space="preserve">
+    <value>TextTable</value>
+  </data>
+  <data name="&gt;&gt;TextTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextTable.Parent" xml:space="preserve">
+    <value>TextPanel</value>
+  </data>
+  <data name="&gt;&gt;TextTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TextTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TextCheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="TextButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextTextbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="TextCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -666,782 +843,386 @@
   <data name="&gt;&gt;TextTextbox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="TextTable.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="TextTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 1</value>
-  </data>
-  <data name="TextTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="TextTable.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TextTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>517, 28</value>
-  </data>
-  <data name="TextTable.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TextTable.Name" xml:space="preserve">
-    <value>TextTable</value>
-  </data>
-  <data name="&gt;&gt;TextTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextTable.Parent" xml:space="preserve">
-    <value>TextPanel</value>
-  </data>
-  <data name="&gt;&gt;TextTable.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TextTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TextCheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="TextButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextTextbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="TextPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="TextPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="TextPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="TextPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="TextPanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="TextPanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 1, 3, 1</value>
-  </data>
-  <data name="TextPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>523, 30</value>
-  </data>
-  <data name="TextPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;TextPanel.Name" xml:space="preserve">
-    <value>TextPanel</value>
-  </data>
-  <data name="&gt;&gt;TextPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TextPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="MD5Table.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="MD5Table.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="MD5Button.AutoSize" type="System.Boolean, mscorlib">
+  <data name="HashContainer.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MD5Button.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="MD5Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MD5Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 2</value>
-  </data>
-  <data name="MD5Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="MD5Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="MD5Button.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="MD5Button.Text" xml:space="preserve">
-    <value>Copy MD5</value>
-  </data>
-  <data name="&gt;&gt;MD5Button.Name" xml:space="preserve">
-    <value>MD5Button</value>
-  </data>
-  <data name="&gt;&gt;MD5Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MD5Button.Parent" xml:space="preserve">
-    <value>MD5Table</value>
-  </data>
-  <data name="&gt;&gt;MD5Button.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="MD5Textbox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="MD5Textbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 3</value>
-  </data>
-  <data name="MD5Textbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 22</value>
-  </data>
-  <data name="MD5Textbox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;MD5Textbox.Name" xml:space="preserve">
-    <value>MD5Textbox</value>
-  </data>
-  <data name="&gt;&gt;MD5Textbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MD5Textbox.Parent" xml:space="preserve">
-    <value>MD5Table</value>
-  </data>
-  <data name="&gt;&gt;MD5Textbox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MD5CheckBox.AutoSize" type="System.Boolean, mscorlib">
+  <data name="HashContainer.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MD5CheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="MD5CheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="HashContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="MD5CheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="HashContainer.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
   </data>
-  <data name="MD5CheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="MD5CheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="MD5CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 26</value>
-  </data>
-  <data name="MD5CheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="MD5CheckBox.Text" xml:space="preserve">
-    <value>MD5:</value>
-  </data>
-  <data name="MD5CheckBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;MD5CheckBox.Name" xml:space="preserve">
-    <value>MD5CheckBox</value>
-  </data>
-  <data name="&gt;&gt;MD5CheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MD5CheckBox.Parent" xml:space="preserve">
-    <value>MD5Table</value>
-  </data>
-  <data name="&gt;&gt;MD5CheckBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="MD5Table.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="MD5Table.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 1</value>
-  </data>
-  <data name="MD5Table.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="MD5Table.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MD5Table.Size" type="System.Drawing.Size, System.Drawing">
-    <value>517, 28</value>
-  </data>
-  <data name="MD5Table.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MD5Table.Name" xml:space="preserve">
-    <value>MD5Table</value>
-  </data>
-  <data name="&gt;&gt;MD5Table.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MD5Table.Parent" xml:space="preserve">
-    <value>MD5Panel</value>
-  </data>
-  <data name="&gt;&gt;MD5Table.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="MD5Table.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="MD5Button" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="MD5Textbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="MD5CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="MD5Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="MD5Panel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="HashContainer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 60</value>
   </data>
-  <data name="MD5Panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="MD5Panel.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="MD5Panel.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="MD5Panel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 1, 3, 1</value>
-  </data>
-  <data name="MD5Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>523, 30</value>
-  </data>
-  <data name="MD5Panel.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;MD5Panel.Name" xml:space="preserve">
-    <value>MD5Panel</value>
-  </data>
-  <data name="&gt;&gt;MD5Panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MD5Panel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MD5Panel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="SHA1Table.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="SHA1Table.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="SHA1CheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SHA1CheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="SHA1CheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA1CheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHA1CheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="SHA1CheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SHA1CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 26</value>
-  </data>
-  <data name="SHA1CheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="SHA1CheckBox.Text" xml:space="preserve">
-    <value>SHA-1:</value>
-  </data>
-  <data name="SHA1CheckBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;SHA1CheckBox.Name" xml:space="preserve">
-    <value>SHA1CheckBox</value>
-  </data>
-  <data name="&gt;&gt;SHA1CheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA1CheckBox.Parent" xml:space="preserve">
-    <value>SHA1Table</value>
-  </data>
-  <data name="&gt;&gt;SHA1CheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SHA1Button.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SHA1Button.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA1Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHA1Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 2</value>
-  </data>
-  <data name="SHA1Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SHA1Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="SHA1Button.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="SHA1Button.Text" xml:space="preserve">
-    <value>Copy SHA-1</value>
-  </data>
-  <data name="&gt;&gt;SHA1Button.Name" xml:space="preserve">
-    <value>SHA1Button</value>
-  </data>
-  <data name="&gt;&gt;SHA1Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA1Button.Parent" xml:space="preserve">
-    <value>SHA1Table</value>
-  </data>
-  <data name="&gt;&gt;SHA1Button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="SHA1Textbox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA1Textbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 3</value>
-  </data>
-  <data name="SHA1Textbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 22</value>
-  </data>
-  <data name="SHA1Textbox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;SHA1Textbox.Name" xml:space="preserve">
-    <value>SHA1Textbox</value>
-  </data>
-  <data name="&gt;&gt;SHA1Textbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA1Textbox.Parent" xml:space="preserve">
-    <value>SHA1Table</value>
-  </data>
-  <data name="&gt;&gt;SHA1Textbox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="SHA1Table.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA1Table.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 1</value>
-  </data>
-  <data name="SHA1Table.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="HashContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="SHA1Table.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="HashContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>523, 195</value>
   </data>
-  <data name="SHA1Table.Size" type="System.Drawing.Size, System.Drawing">
-    <value>517, 28</value>
-  </data>
-  <data name="SHA1Table.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;SHA1Table.Name" xml:space="preserve">
-    <value>SHA1Table</value>
-  </data>
-  <data name="&gt;&gt;SHA1Table.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA1Table.Parent" xml:space="preserve">
-    <value>SHA1Panel</value>
-  </data>
-  <data name="&gt;&gt;SHA1Table.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SHA1Table.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="SHA1CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="SHA1Button" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="SHA1Textbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="SHA1Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="SHA1Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 90</value>
-  </data>
-  <data name="SHA1Panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SHA1Panel.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="SHA1Panel.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="SHA1Panel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 1, 3, 1</value>
-  </data>
-  <data name="SHA1Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>523, 30</value>
-  </data>
-  <data name="SHA1Panel.TabIndex" type="System.Int32, mscorlib">
+  <data name="HashContainer.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="&gt;&gt;SHA1Panel.Name" xml:space="preserve">
-    <value>SHA1Panel</value>
+  <data name="HashContainer.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;SHA1Panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;HashContainer.Name" xml:space="preserve">
+    <value>HashContainer</value>
   </data>
-  <data name="&gt;&gt;SHA1Panel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;HashContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HashContainer.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SHA1Panel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="SHA256Table.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="SHA256Table.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="SHA256CheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SHA256CheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="SHA256CheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA256CheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHA256CheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="SHA256CheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SHA256CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 26</value>
-  </data>
-  <data name="SHA256CheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="SHA256CheckBox.Text" xml:space="preserve">
-    <value>SHA-256:</value>
-  </data>
-  <data name="SHA256CheckBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;SHA256CheckBox.Name" xml:space="preserve">
-    <value>SHA256CheckBox</value>
-  </data>
-  <data name="&gt;&gt;SHA256CheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA256CheckBox.Parent" xml:space="preserve">
-    <value>SHA256Table</value>
-  </data>
-  <data name="&gt;&gt;SHA256CheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SHA256Button.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SHA256Button.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA256Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHA256Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 2</value>
-  </data>
-  <data name="SHA256Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SHA256Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="SHA256Button.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="SHA256Button.Text" xml:space="preserve">
-    <value>Copy SHA-256</value>
-  </data>
-  <data name="&gt;&gt;SHA256Button.Name" xml:space="preserve">
-    <value>SHA256Button</value>
-  </data>
-  <data name="&gt;&gt;SHA256Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA256Button.Parent" xml:space="preserve">
-    <value>SHA256Table</value>
-  </data>
-  <data name="&gt;&gt;SHA256Button.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;HashContainer.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="SHA256Textbox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;ControlTable.Name" xml:space="preserve">
+    <value>ControlTable</value>
   </data>
-  <data name="SHA256Textbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 3</value>
-  </data>
-  <data name="SHA256Textbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 22</value>
-  </data>
-  <data name="SHA256Textbox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;SHA256Textbox.Name" xml:space="preserve">
-    <value>SHA256Textbox</value>
-  </data>
-  <data name="&gt;&gt;SHA256Textbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA256Textbox.Parent" xml:space="preserve">
-    <value>SHA256Table</value>
-  </data>
-  <data name="&gt;&gt;SHA256Textbox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="SHA256Table.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA256Table.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 1</value>
-  </data>
-  <data name="SHA256Table.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="SHA256Table.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="SHA256Table.Size" type="System.Drawing.Size, System.Drawing">
-    <value>517, 28</value>
-  </data>
-  <data name="SHA256Table.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;SHA256Table.Name" xml:space="preserve">
-    <value>SHA256Table</value>
-  </data>
-  <data name="&gt;&gt;SHA256Table.Type" xml:space="preserve">
+  <data name="&gt;&gt;ControlTable.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SHA256Table.Parent" xml:space="preserve">
-    <value>SHA256Panel</value>
+  <data name="&gt;&gt;ControlTable.Parent" xml:space="preserve">
+    <value>ControlPanel</value>
   </data>
-  <data name="&gt;&gt;SHA256Table.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ControlTable.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="SHA256Table.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="SHA256CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="SHA256Button" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="SHA256Textbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="ControlTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="button1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ControlButton_Check" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ControlButton_Verify" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="ControlButton_Both" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="button5" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="SHA256Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="ControlPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
-  <data name="SHA256Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 120</value>
+  <data name="ControlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 225</value>
   </data>
-  <data name="SHA256Panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="ControlPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="SHA256Panel.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="ControlPanel.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 30</value>
   </data>
-  <data name="SHA256Panel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="ControlPanel.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 30</value>
   </data>
-  <data name="SHA256Panel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="ControlPanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 1, 3, 1</value>
   </data>
-  <data name="SHA256Panel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ControlPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>523, 30</value>
   </data>
-  <data name="SHA256Panel.TabIndex" type="System.Int32, mscorlib">
+  <data name="ControlPanel.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="&gt;&gt;SHA256Panel.Name" xml:space="preserve">
-    <value>SHA256Panel</value>
+  <data name="&gt;&gt;ControlPanel.Name" xml:space="preserve">
+    <value>ControlPanel</value>
   </data>
-  <data name="&gt;&gt;SHA256Panel.Type" xml:space="preserve">
+  <data name="&gt;&gt;ControlPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SHA256Panel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ControlPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SHA256Panel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;ControlPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="SHA512Table.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="ControlTable.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="SHA512Table.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="SHA512CheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SHA512CheckBox.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="SHA512CheckBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA512CheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHA512CheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="SHA512CheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SHA512CheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 26</value>
-  </data>
-  <data name="SHA512CheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="SHA512CheckBox.Text" xml:space="preserve">
-    <value>SHA-512:</value>
-  </data>
-  <data name="SHA512CheckBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;SHA512CheckBox.Name" xml:space="preserve">
-    <value>SHA512CheckBox</value>
-  </data>
-  <data name="&gt;&gt;SHA512CheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA512CheckBox.Parent" xml:space="preserve">
-    <value>SHA512Table</value>
-  </data>
-  <data name="&gt;&gt;SHA512CheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SHA512Button.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="SHA512Button.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SHA512Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="SHA512Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 2</value>
-  </data>
-  <data name="SHA512Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="SHA512Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="SHA512Button.TabIndex" type="System.Int32, mscorlib">
+  <data name="ControlTable.ColumnCount" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="SHA512Button.Text" xml:space="preserve">
-    <value>Copy SHA-512</value>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
   </data>
-  <data name="&gt;&gt;SHA512Button.Name" xml:space="preserve">
-    <value>SHA512Button</value>
-  </data>
-  <data name="&gt;&gt;SHA512Button.Type" xml:space="preserve">
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SHA512Button.Parent" xml:space="preserve">
-    <value>SHA512Table</value>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>ControlTable</value>
   </data>
-  <data name="&gt;&gt;SHA512Button.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.Name" xml:space="preserve">
+    <value>ControlButton_Check</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.Parent" xml:space="preserve">
+    <value>ControlTable</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="SHA512Textbox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;ControlButton_Verify.Name" xml:space="preserve">
+    <value>ControlButton_Verify</value>
   </data>
-  <data name="SHA512Textbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 3</value>
+  <data name="&gt;&gt;ControlButton_Verify.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="SHA512Textbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 22</value>
+  <data name="&gt;&gt;ControlButton_Verify.Parent" xml:space="preserve">
+    <value>ControlTable</value>
   </data>
-  <data name="SHA512Textbox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;SHA512Textbox.Name" xml:space="preserve">
-    <value>SHA512Textbox</value>
-  </data>
-  <data name="&gt;&gt;SHA512Textbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SHA512Textbox.Parent" xml:space="preserve">
-    <value>SHA512Table</value>
-  </data>
-  <data name="&gt;&gt;SHA512Textbox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ControlButton_Verify.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="SHA512Table.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;ControlButton_Both.Name" xml:space="preserve">
+    <value>ControlButton_Both</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Both.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Both.Parent" xml:space="preserve">
+    <value>ControlTable</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Both.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;button5.Name" xml:space="preserve">
+    <value>button5</value>
+  </data>
+  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+    <value>ControlTable</value>
+  </data>
+  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ControlTable.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="SHA512Table.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ControlTable.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 1</value>
   </data>
-  <data name="SHA512Table.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="ControlTable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="SHA512Table.RowCount" type="System.Int32, mscorlib">
+  <data name="ControlTable.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="SHA512Table.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ControlTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>517, 28</value>
   </data>
-  <data name="SHA512Table.TabIndex" type="System.Int32, mscorlib">
+  <data name="ControlTable.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;SHA512Table.Name" xml:space="preserve">
-    <value>SHA512Table</value>
+  <data name="&gt;&gt;ControlTable.Name" xml:space="preserve">
+    <value>ControlTable</value>
   </data>
-  <data name="&gt;&gt;SHA512Table.Type" xml:space="preserve">
+  <data name="&gt;&gt;ControlTable.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SHA512Table.Parent" xml:space="preserve">
-    <value>SHA512Panel</value>
+  <data name="&gt;&gt;ControlTable.Parent" xml:space="preserve">
+    <value>ControlPanel</value>
   </data>
-  <data name="&gt;&gt;SHA512Table.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ControlTable.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="SHA512Table.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="SHA512CheckBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="SHA512Button" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="SHA512Textbox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,15,Percent,65,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="ControlTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="button1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ControlButton_Check" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ControlButton_Verify" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="ControlButton_Both" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="button5" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="SHA512Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="button1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="SHA512Panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 150</value>
+  <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="SHA512Panel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="button1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="SHA512Panel.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 26</value>
   </data>
-  <data name="SHA512Panel.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="SHA512Panel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 1, 3, 1</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>slot1</value>
   </data>
-  <data name="SHA512Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>523, 30</value>
+  <data name="button1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="SHA512Panel.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
   </data>
-  <data name="&gt;&gt;SHA512Panel.Name" xml:space="preserve">
-    <value>SHA512Panel</value>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SHA512Panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>ControlTable</value>
   </data>
-  <data name="&gt;&gt;SHA512Panel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;SHA512Panel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="ControlButton_Check.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ControlButton_Check.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ControlButton_Check.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ControlButton_Check.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 2</value>
+  </data>
+  <data name="ControlButton_Check.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ControlButton_Check.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 26</value>
+  </data>
+  <data name="ControlButton_Check.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ControlButton_Check.Text" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.Name" xml:space="preserve">
+    <value>ControlButton_Check</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.Parent" xml:space="preserve">
+    <value>ControlTable</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Check.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ControlButton_Verify.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ControlButton_Verify.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ControlButton_Verify.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ControlButton_Verify.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 2</value>
+  </data>
+  <data name="ControlButton_Verify.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ControlButton_Verify.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 26</value>
+  </data>
+  <data name="ControlButton_Verify.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ControlButton_Verify.Text" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Verify.Name" xml:space="preserve">
+    <value>ControlButton_Verify</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Verify.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Verify.Parent" xml:space="preserve">
+    <value>ControlTable</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Verify.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ControlButton_Both.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ControlButton_Both.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ControlButton_Both.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ControlButton_Both.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 2</value>
+  </data>
+  <data name="ControlButton_Both.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="ControlButton_Both.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 26</value>
+  </data>
+  <data name="ControlButton_Both.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ControlButton_Both.Text" xml:space="preserve">
+    <value>Check &amp;&amp; Verify</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Both.Name" xml:space="preserve">
+    <value>ControlButton_Both</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Both.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Both.Parent" xml:space="preserve">
+    <value>ControlTable</value>
+  </data>
+  <data name="&gt;&gt;ControlButton_Both.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="button5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>414, 2</value>
+  </data>
+  <data name="button5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 26</value>
+  </data>
+  <data name="button5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>slot5</value>
+  </data>
+  <data name="button5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;button5.Name" xml:space="preserve">
+    <value>button5</value>
+  </data>
+  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+    <value>ControlTable</value>
+  </data>
+  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1460,6 +1241,18 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>CheckSum</value>
+  </data>
+  <data name="&gt;&gt;StatusBarProgress.Name" xml:space="preserve">
+    <value>StatusBarProgress</value>
+  </data>
+  <data name="&gt;&gt;StatusBarProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBarText.Name" xml:space="preserve">
+    <value>StatusBarText</value>
+  </data>
+  <data name="&gt;&gt;StatusBarText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FileBrowseDialog.Name" xml:space="preserve">
     <value>FileBrowseDialog</value>

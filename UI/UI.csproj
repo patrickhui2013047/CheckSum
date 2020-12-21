@@ -61,6 +61,7 @@
       <DependentUpon>MainDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Progress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="HashControl.resx">
       <DependentUpon>HashControl.cs</DependentUpon>

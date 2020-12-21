@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDialog));
             this.StatusBar = new System.Windows.Forms.StatusStrip();
+            this.StatusBarProgress = new System.Windows.Forms.ToolStripProgressBar();
+            this.StatusBarText = new System.Windows.Forms.ToolStripStatusLabel();
             this.HashPanel = new System.Windows.Forms.Panel();
             this.Hashtable = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,47 +48,44 @@
             this.TextCheckBox = new System.Windows.Forms.CheckBox();
             this.TextButton = new System.Windows.Forms.Button();
             this.TextTextbox = new System.Windows.Forms.TextBox();
-            this.MD5Panel = new System.Windows.Forms.Panel();
-            this.MD5Table = new System.Windows.Forms.TableLayoutPanel();
-            this.MD5Button = new System.Windows.Forms.Button();
-            this.MD5Textbox = new System.Windows.Forms.TextBox();
-            this.MD5CheckBox = new System.Windows.Forms.CheckBox();
-            this.SHA1Panel = new System.Windows.Forms.Panel();
-            this.SHA1Table = new System.Windows.Forms.TableLayoutPanel();
-            this.SHA1CheckBox = new System.Windows.Forms.CheckBox();
-            this.SHA1Button = new System.Windows.Forms.Button();
-            this.SHA1Textbox = new System.Windows.Forms.TextBox();
-            this.SHA256Panel = new System.Windows.Forms.Panel();
-            this.SHA256Table = new System.Windows.Forms.TableLayoutPanel();
-            this.SHA256CheckBox = new System.Windows.Forms.CheckBox();
-            this.SHA256Button = new System.Windows.Forms.Button();
-            this.SHA256Textbox = new System.Windows.Forms.TextBox();
-            this.SHA512Panel = new System.Windows.Forms.Panel();
-            this.SHA512Table = new System.Windows.Forms.TableLayoutPanel();
-            this.SHA512CheckBox = new System.Windows.Forms.CheckBox();
-            this.SHA512Button = new System.Windows.Forms.Button();
-            this.SHA512Textbox = new System.Windows.Forms.TextBox();
+            this.HashContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.ControlPanel = new System.Windows.Forms.Panel();
+            this.ControlTable = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ControlButton_Check = new System.Windows.Forms.Button();
+            this.ControlButton_Verify = new System.Windows.Forms.Button();
+            this.ControlButton_Both = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.StatusBar.SuspendLayout();
             this.HashPanel.SuspendLayout();
             this.Hashtable.SuspendLayout();
             this.FilePanel.SuspendLayout();
             this.FileTable.SuspendLayout();
             this.TextPanel.SuspendLayout();
             this.TextTable.SuspendLayout();
-            this.MD5Panel.SuspendLayout();
-            this.MD5Table.SuspendLayout();
-            this.SHA1Panel.SuspendLayout();
-            this.SHA1Table.SuspendLayout();
-            this.SHA256Panel.SuspendLayout();
-            this.SHA256Table.SuspendLayout();
-            this.SHA512Panel.SuspendLayout();
-            this.SHA512Table.SuspendLayout();
+            this.ControlPanel.SuspendLayout();
+            this.ControlTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusBar
             // 
             this.StatusBar.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusBarProgress,
+            this.StatusBarText});
             resources.ApplyResources(this.StatusBar, "StatusBar");
             this.StatusBar.Name = "StatusBar";
+            // 
+            // StatusBarProgress
+            // 
+            this.StatusBarProgress.Name = "StatusBarProgress";
+            resources.ApplyResources(this.StatusBarProgress, "StatusBarProgress");
+            this.StatusBarProgress.Step = 1;
+            // 
+            // StatusBarText
+            // 
+            this.StatusBarText.Name = "StatusBarText";
+            resources.ApplyResources(this.StatusBarText, "StatusBarText");
             // 
             // HashPanel
             // 
@@ -170,6 +169,7 @@
             resources.ApplyResources(this.TextCheckBox, "TextCheckBox");
             this.TextCheckBox.Name = "TextCheckBox";
             this.TextCheckBox.UseVisualStyleBackColor = true;
+            this.TextCheckBox.CheckedChanged += new System.EventHandler(this.TextCheckBox_CheckedChanged);
             // 
             // TextButton
             // 
@@ -182,157 +182,68 @@
             // 
             resources.ApplyResources(this.TextTextbox, "TextTextbox");
             this.TextTextbox.Name = "TextTextbox";
-            this.TextTextbox.ReadOnly = true;
             // 
-            // MD5Panel
+            // HashContainer
             // 
-            this.MD5Panel.Controls.Add(this.MD5Table);
-            resources.ApplyResources(this.MD5Panel, "MD5Panel");
-            this.MD5Panel.Name = "MD5Panel";
+            resources.ApplyResources(this.HashContainer, "HashContainer");
+            this.HashContainer.Name = "HashContainer";
             // 
-            // MD5Table
+            // ControlPanel
             // 
-            resources.ApplyResources(this.MD5Table, "MD5Table");
-            this.MD5Table.Controls.Add(this.MD5Button, 2, 0);
-            this.MD5Table.Controls.Add(this.MD5Textbox, 1, 0);
-            this.MD5Table.Controls.Add(this.MD5CheckBox, 0, 0);
-            this.MD5Table.Name = "MD5Table";
+            this.ControlPanel.Controls.Add(this.ControlTable);
+            resources.ApplyResources(this.ControlPanel, "ControlPanel");
+            this.ControlPanel.Name = "ControlPanel";
             // 
-            // MD5Button
+            // ControlTable
             // 
-            resources.ApplyResources(this.MD5Button, "MD5Button");
-            this.MD5Button.Name = "MD5Button";
-            this.MD5Button.UseVisualStyleBackColor = false;
-            this.MD5Button.Click += new System.EventHandler(this.MD5Button_Click);
+            resources.ApplyResources(this.ControlTable, "ControlTable");
+            this.ControlTable.Controls.Add(this.button1, 0, 0);
+            this.ControlTable.Controls.Add(this.ControlButton_Check, 1, 0);
+            this.ControlTable.Controls.Add(this.ControlButton_Verify, 2, 0);
+            this.ControlTable.Controls.Add(this.ControlButton_Both, 3, 0);
+            this.ControlTable.Controls.Add(this.button5, 4, 0);
+            this.ControlTable.Name = "ControlTable";
             // 
-            // MD5Textbox
+            // button1
             // 
-            resources.ApplyResources(this.MD5Textbox, "MD5Textbox");
-            this.MD5Textbox.Name = "MD5Textbox";
-            this.MD5Textbox.ReadOnly = true;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // MD5CheckBox
+            // ControlButton_Check
             // 
-            resources.ApplyResources(this.MD5CheckBox, "MD5CheckBox");
-            this.MD5CheckBox.Checked = true;
-            this.MD5CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.MD5CheckBox.Name = "MD5CheckBox";
-            this.MD5CheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.ControlButton_Check, "ControlButton_Check");
+            this.ControlButton_Check.Name = "ControlButton_Check";
+            this.ControlButton_Check.UseVisualStyleBackColor = false;
+            this.ControlButton_Check.Click += new System.EventHandler(this.ControlButton_Check_Click);
             // 
-            // SHA1Panel
+            // ControlButton_Verify
             // 
-            this.SHA1Panel.Controls.Add(this.SHA1Table);
-            resources.ApplyResources(this.SHA1Panel, "SHA1Panel");
-            this.SHA1Panel.Name = "SHA1Panel";
+            resources.ApplyResources(this.ControlButton_Verify, "ControlButton_Verify");
+            this.ControlButton_Verify.Name = "ControlButton_Verify";
+            this.ControlButton_Verify.UseVisualStyleBackColor = false;
+            this.ControlButton_Verify.Click += new System.EventHandler(this.ControlButton_Verify_Click);
             // 
-            // SHA1Table
+            // ControlButton_Both
             // 
-            resources.ApplyResources(this.SHA1Table, "SHA1Table");
-            this.SHA1Table.Controls.Add(this.SHA1CheckBox, 0, 0);
-            this.SHA1Table.Controls.Add(this.SHA1Button, 2, 0);
-            this.SHA1Table.Controls.Add(this.SHA1Textbox, 1, 0);
-            this.SHA1Table.Name = "SHA1Table";
+            resources.ApplyResources(this.ControlButton_Both, "ControlButton_Both");
+            this.ControlButton_Both.Name = "ControlButton_Both";
+            this.ControlButton_Both.UseVisualStyleBackColor = false;
+            this.ControlButton_Both.Click += new System.EventHandler(this.ControlButton_Both_Click);
             // 
-            // SHA1CheckBox
+            // button5
             // 
-            resources.ApplyResources(this.SHA1CheckBox, "SHA1CheckBox");
-            this.SHA1CheckBox.Checked = true;
-            this.SHA1CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SHA1CheckBox.Name = "SHA1CheckBox";
-            this.SHA1CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SHA1Button
-            // 
-            resources.ApplyResources(this.SHA1Button, "SHA1Button");
-            this.SHA1Button.Name = "SHA1Button";
-            this.SHA1Button.UseVisualStyleBackColor = false;
-            this.SHA1Button.Click += new System.EventHandler(this.SHA1Button_Click);
-            // 
-            // SHA1Textbox
-            // 
-            resources.ApplyResources(this.SHA1Textbox, "SHA1Textbox");
-            this.SHA1Textbox.Name = "SHA1Textbox";
-            this.SHA1Textbox.ReadOnly = true;
-            // 
-            // SHA256Panel
-            // 
-            this.SHA256Panel.Controls.Add(this.SHA256Table);
-            resources.ApplyResources(this.SHA256Panel, "SHA256Panel");
-            this.SHA256Panel.Name = "SHA256Panel";
-            // 
-            // SHA256Table
-            // 
-            resources.ApplyResources(this.SHA256Table, "SHA256Table");
-            this.SHA256Table.Controls.Add(this.SHA256CheckBox, 0, 0);
-            this.SHA256Table.Controls.Add(this.SHA256Button, 2, 0);
-            this.SHA256Table.Controls.Add(this.SHA256Textbox, 1, 0);
-            this.SHA256Table.Name = "SHA256Table";
-            // 
-            // SHA256CheckBox
-            // 
-            resources.ApplyResources(this.SHA256CheckBox, "SHA256CheckBox");
-            this.SHA256CheckBox.Checked = true;
-            this.SHA256CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SHA256CheckBox.Name = "SHA256CheckBox";
-            this.SHA256CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SHA256Button
-            // 
-            resources.ApplyResources(this.SHA256Button, "SHA256Button");
-            this.SHA256Button.Name = "SHA256Button";
-            this.SHA256Button.UseVisualStyleBackColor = false;
-            this.SHA256Button.Click += new System.EventHandler(this.SHA256Button_Click);
-            // 
-            // SHA256Textbox
-            // 
-            resources.ApplyResources(this.SHA256Textbox, "SHA256Textbox");
-            this.SHA256Textbox.Name = "SHA256Textbox";
-            this.SHA256Textbox.ReadOnly = true;
-            // 
-            // SHA512Panel
-            // 
-            this.SHA512Panel.Controls.Add(this.SHA512Table);
-            resources.ApplyResources(this.SHA512Panel, "SHA512Panel");
-            this.SHA512Panel.Name = "SHA512Panel";
-            // 
-            // SHA512Table
-            // 
-            resources.ApplyResources(this.SHA512Table, "SHA512Table");
-            this.SHA512Table.Controls.Add(this.SHA512CheckBox, 0, 0);
-            this.SHA512Table.Controls.Add(this.SHA512Button, 2, 0);
-            this.SHA512Table.Controls.Add(this.SHA512Textbox, 1, 0);
-            this.SHA512Table.Name = "SHA512Table";
-            // 
-            // SHA512CheckBox
-            // 
-            resources.ApplyResources(this.SHA512CheckBox, "SHA512CheckBox");
-            this.SHA512CheckBox.Checked = true;
-            this.SHA512CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SHA512CheckBox.Name = "SHA512CheckBox";
-            this.SHA512CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SHA512Button
-            // 
-            resources.ApplyResources(this.SHA512Button, "SHA512Button");
-            this.SHA512Button.Name = "SHA512Button";
-            this.SHA512Button.UseVisualStyleBackColor = false;
-            this.SHA512Button.Click += new System.EventHandler(this.SHA512Button_Click);
-            // 
-            // SHA512Textbox
-            // 
-            resources.ApplyResources(this.SHA512Textbox, "SHA512Textbox");
-            this.SHA512Textbox.Name = "SHA512Textbox";
-            this.SHA512Textbox.ReadOnly = true;
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // MainDialog
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.SHA512Panel);
-            this.Controls.Add(this.SHA256Panel);
-            this.Controls.Add(this.SHA1Panel);
-            this.Controls.Add(this.MD5Panel);
+            this.Controls.Add(this.ControlPanel);
+            this.Controls.Add(this.HashContainer);
             this.Controls.Add(this.TextPanel);
             this.Controls.Add(this.FilePanel);
             this.Controls.Add(this.HashPanel);
@@ -343,7 +254,10 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Load += new System.EventHandler(this.MainDialog_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainDialog_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainDialog_DragEnter);
+            this.StatusBar.ResumeLayout(false);
+            this.StatusBar.PerformLayout();
             this.HashPanel.ResumeLayout(false);
             this.Hashtable.ResumeLayout(false);
             this.Hashtable.PerformLayout();
@@ -353,18 +267,9 @@
             this.TextPanel.ResumeLayout(false);
             this.TextTable.ResumeLayout(false);
             this.TextTable.PerformLayout();
-            this.MD5Panel.ResumeLayout(false);
-            this.MD5Table.ResumeLayout(false);
-            this.MD5Table.PerformLayout();
-            this.SHA1Panel.ResumeLayout(false);
-            this.SHA1Table.ResumeLayout(false);
-            this.SHA1Table.PerformLayout();
-            this.SHA256Panel.ResumeLayout(false);
-            this.SHA256Table.ResumeLayout(false);
-            this.SHA256Table.PerformLayout();
-            this.SHA512Panel.ResumeLayout(false);
-            this.SHA512Table.ResumeLayout(false);
-            this.SHA512Table.PerformLayout();
+            this.ControlPanel.ResumeLayout(false);
+            this.ControlTable.ResumeLayout(false);
+            this.ControlTable.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,26 +293,16 @@
         private System.Windows.Forms.CheckBox TextCheckBox;
         private System.Windows.Forms.Button TextButton;
         private System.Windows.Forms.TextBox TextTextbox;
-        private System.Windows.Forms.Panel MD5Panel;
-        private System.Windows.Forms.TableLayoutPanel MD5Table;
-        private System.Windows.Forms.Button MD5Button;
-        private System.Windows.Forms.TextBox MD5Textbox;
-        private System.Windows.Forms.CheckBox MD5CheckBox;
-        private System.Windows.Forms.Panel SHA1Panel;
-        private System.Windows.Forms.TableLayoutPanel SHA1Table;
-        private System.Windows.Forms.CheckBox SHA1CheckBox;
-        private System.Windows.Forms.Button SHA1Button;
-        private System.Windows.Forms.TextBox SHA1Textbox;
-        private System.Windows.Forms.Panel SHA256Panel;
-        private System.Windows.Forms.TableLayoutPanel SHA256Table;
-        private System.Windows.Forms.CheckBox SHA256CheckBox;
-        private System.Windows.Forms.Button SHA256Button;
-        private System.Windows.Forms.TextBox SHA256Textbox;
-        private System.Windows.Forms.Panel SHA512Panel;
-        private System.Windows.Forms.TableLayoutPanel SHA512Table;
-        private System.Windows.Forms.CheckBox SHA512CheckBox;
-        private System.Windows.Forms.Button SHA512Button;
-        private System.Windows.Forms.TextBox SHA512Textbox;
+        private System.Windows.Forms.FlowLayoutPanel HashContainer;
+        private System.Windows.Forms.ToolStripProgressBar StatusBarProgress;
+        private System.Windows.Forms.ToolStripStatusLabel StatusBarText;
+        private System.Windows.Forms.Panel ControlPanel;
+        private System.Windows.Forms.TableLayoutPanel ControlTable;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ControlButton_Both;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ControlButton_Verify;
+        private System.Windows.Forms.Button ControlButton_Check;
     }
 }
 
