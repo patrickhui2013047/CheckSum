@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CheckSum": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt -a -c 1cb251ec0d568de6a929b520c4aed8d1"
+    }
+  }
+}
