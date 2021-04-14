@@ -90,7 +90,7 @@ namespace UI
                         field.SetText("");
                     }
                 }
-                StatusBarProgress.Value += 1;
+                StatusBarProgress.Value ++;
                 InputStream.Position = 0;
             }
             StatusBarText.Text = "Completed";
@@ -101,14 +101,21 @@ namespace UI
             StatusBarProgress.Maximum = HashList.Where(arg => arg.Enable).Count();
             StatusBarProgress.Value = 0;
             StatusBarText.Text = "Verifying";
+            var flag = false;
             foreach (HashProcesser processer in HashList.Where(arg => arg.Enable))
             {
-                if (HashTextbox.Text == processer.OutString)
+                if (HashTextbox.Text.ToUpper() == processer.OutString.ToUpper())
                 {
                     MessageBox.Show(processer.Name + " matched.");
+                    flag = true;
                 }
+                StatusBarProgress.Value++;
             }
-            StatusBarText.Text = "Verifying";
+            if (!flag)
+            {
+                MessageBox.Show("Hash unmatched.");
+            }
+            StatusBarText.Text = "Completed";
         }
 
         public bool ChangeHandler(string name,bool check)

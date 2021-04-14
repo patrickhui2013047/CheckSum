@@ -32,7 +32,7 @@ namespace Algorithm
             {
                 builder.Append(bytes[i].ToString("x2"));
             }
-            OutString = builder.ToString();
+            OutString = builder.ToString().ToUpper();
             InputStream.Position = 0;
         }
     }
