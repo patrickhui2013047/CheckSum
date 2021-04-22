@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CheckSum\CheckSum.csproj" />
+    <ProjectReference Include="..\DllLoader\DllLoader.csproj" />
+    <ProjectReference Include="..\MD5\MD5.csproj" />
+    <ProjectReference Include="..\SHA\SHA.csproj" />
+  </ItemGroup>
+
+</Project>

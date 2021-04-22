@@ -1,0 +1,68 @@
+﻿<Window x:Class="UI.View.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI.View"
+        xmlns:viewmodel="clr-namespace:PH.CheckSum.UI.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+        mc:Ignorable="d"
+        Title="CheckSum" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header=""/>
+            </MenuItem>
+
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Row="1">
+            <Grid x:Name="FileField" Height="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="File:"/>
+                <TextBlock Grid.Column="1" Text="{Binding File}" IsEnabled="{Binding FileEnable}" HorizontalAlignment="Stretch"/>
+                <Button Grid.Column="2" Content="Browse" Command="{Binding BrowseFile}" IsEnabled="{Binding FileEnable}"/>
+            </Grid>
+            <Grid x:Name="TextField" Height="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" Content="Text" IsChecked="{Binding TextEnable, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Grid.Column="1" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding TextEnable}" HorizontalAlignment="Stretch"/>
+                <Button Grid.Column="2" Content="Plaste" IsEnabled="{Binding TextEnable}" Command="{Binding PlasteText}"/>
+            </Grid>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="2" Orientation="Vertical" >
+            <ItemsControl ItemsSource="{Binding HashControlCollection}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type viewmodel:HashControlViewModel}">
+                        
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+
+
+        <StatusBar Grid.Row="3">
+            
+        </StatusBar>
+    </Grid>
+</Window>

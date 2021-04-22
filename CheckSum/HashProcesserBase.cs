@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Hash = System.Security.Cryptography;
 
-namespace Algorithm
+namespace PH.CheckSum
 {
-    public abstract class HashProcesser
+    public abstract class HashProcesserBase : IHashProcesser
     {
-        public Stream InputStream { get; private set; }
-        public string OutString { get; private set; }
+        public Stream InputStream { get; protected set; }
+
+        public string OutString { get; protected set; }
+
         public string Name { get; }
+
         public bool Enable { get; set; }
+
         protected Hash.HashAlgorithm Algorithm { get; set; }
 
-        protected HashProcesser(string name, bool enable = true)
+        public HashProcesserBase() { }
+
+        protected HashProcesserBase(string name, bool enable = true)
         {
             Name = name;
             Enable = enable;
@@ -37,4 +41,3 @@ namespace Algorithm
         }
     }
 }
-
