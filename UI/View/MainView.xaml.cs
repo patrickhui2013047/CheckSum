@@ -11,8 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
-namespace UI.View
+using PH.CheckSum.UI.ViewModel;
+namespace PH.CheckSum.UI.View
 {
     /// <summary>
     /// MainView.xaml 的互動邏輯
@@ -22,6 +22,7 @@ namespace UI.View
         public MainView()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }

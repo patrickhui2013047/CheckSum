@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using PH.CheckSum;
+using PH.Dll;
 
 namespace PH.CheckSum.UI.ViewModel
 {
@@ -53,10 +55,43 @@ namespace PH.CheckSum.UI.ViewModel
         #endregion
 
         #region Hash Control Member
+        public List<IHashProcesser> HashProcesserList = new List<IHashProcesser>();
         public List<HashControlViewModel> _hashControlList = new List<HashControlViewModel>();
         public ObservableCollection<HashControlViewModel> HashControlCollection { get { return new ObservableCollection<HashControlViewModel>(_hashControlList); } }
         #endregion
 
-        public MainViewModel() { }
+        #region Event
+        public ICommand Compute { get; private set; }
+
+
+        private void ComputeHash()
+        {
+
+        }
+
+        private void SetCommand()
+        {
+            Compute = new RelayCommand(o => ComputeHash());
+        }
+
+        #endregion
+
+        public MainViewModel() 
+        {
+            _hashControlList.Add(new HashControlViewModel());
+            LoadProcesser();
+            SetCommand();
+        }
+
+        public void LoadProcesser()
+        {
+            _hashControlList.Clear();
+            HashProcesserList.Clear();
+            DllLoader<IHashProcesser> dllLoader = new DllLoader<IHashProcesser>();
+            dllLoader.Types.ForEach(item => HashProcesserList.Add((IHashProcesser)Activator.CreateInstance(item)));
+            HashProcesserList.ForEach(item => _hashControlList.Add(new HashControlViewModel(item)));
+            //OnPropertyChanged(nameof(HashControlCollection));
+        }
+
     }
 }

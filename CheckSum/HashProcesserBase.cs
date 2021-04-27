@@ -26,6 +26,8 @@ namespace PH.CheckSum
             Enable = enable;
         }
 
+        public event CompleteHandler Complete;
+
         public void Run(Stream inputStream)
         {
             InputStream = inputStream;
@@ -38,6 +40,12 @@ namespace PH.CheckSum
             }
             OutString = builder.ToString().ToUpper();
             InputStream.Position = 0;
+            if (Complete != null)
+            {
+                Complete.Invoke();
+            }
         }
+
+
     }
 }
