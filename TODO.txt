@@ -1,0 +1,7 @@
+TODO List
+
+Multiple files hashing
+
+Commandline tool
+
+Make Processor less relay on System libary (Allow not pre impletemented hassh)

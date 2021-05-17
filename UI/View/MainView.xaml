@@ -1,0 +1,117 @@
+﻿<Window x:Class="PH.CheckSum.UI.View.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:view="clr-namespace:PH.CheckSum.UI.View"
+        xmlns:viewmodel="clr-namespace:PH.CheckSum.UI.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+        mc:Ignorable="d"
+        Background="#F0F0F0"
+        AllowDrop="True"
+        Drop="Window_Drop"
+        Title="CheckSum" Height="450" Width="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Drop">
+            <i:InvokeCommandAction Command="{Binding ItemDrop}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="AutoCompute" IsCheckable="True" IsChecked="{Binding AutoCompute}"/>
+            </MenuItem>
+
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel x:Name="InputField" Grid.Row="1">
+            <Grid x:Name="FileField" Height="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="File:"/>
+                <TextBlock Grid.Column="1" Text="{Binding File}" IsEnabled="{Binding FileEnable}" HorizontalAlignment="Stretch"/>
+                <Button Grid.Column="2" Content="Browse" Command="{Binding BrowseFile}" IsEnabled="{Binding FileControlEnable}"/>
+            </Grid>
+            <Grid x:Name="TextField" Height="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" Content="Text" IsChecked="{Binding TextEnable, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsNotBusy}"/>
+                <TextBox Grid.Column="1" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding TextEnable}" HorizontalAlignment="Stretch"/>
+                <Button Grid.Column="2" Content="Plaste" IsEnabled="{Binding TextControlEnable}" Command="{Binding PlasteText}"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel x:Name="HashControllerPanel" Grid.Row="2" Orientation="Vertical" Margin="4,4,4,0" >
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl ItemsSource="{Binding HashControlCollection}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <ContentControl Content="{Binding}"  Margin="0,1,0,1">
+                                <ContentControl.ContentTemplate>
+                                    <DataTemplate>
+                                        <view:HashControlView/>
+                                    </DataTemplate>
+                                </ContentControl.ContentTemplate>
+                            </ContentControl>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </StackPanel>
+
+        <Grid x:Name="ControlPanel" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Compute" Grid.Column="1" Content="Compute" Command="{Binding Compute}" IsEnabled="{Binding IsNotBusy}"/>
+            <Button x:Name="Compare" Grid.Column="3" Content="Compare" Command="{Binding Compare}" IsEnabled="{Binding IsNotBusy}"/>
+            <Button x:Name="ComputeNCompare" Grid.Column="5" Content="Compute and Compare" Command="{Binding ComputeNCompare}" IsEnabled="{Binding IsNotBusy}"/>
+        </Grid>
+        
+        <Grid x:Name="HashField" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Hash:"/>
+            <TextBox Grid.Column="1" Text="{Binding Hash, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding IsNotBusy}" HorizontalAlignment="Stretch"/>
+            <Button Grid.Column="2" Content="Plaste" IsEnabled="{Binding IsNotBusy}" Command="{Binding PasteHash}"/>
+        </Grid>
+        
+        <StatusBar Grid.Row="5">
+            <StatusBarItem>
+                <ProgressBar x:Name="Process" Cursor="AppStarting" Minimum="0" Maximum="{Binding ProcessCount,Mode=OneWay}" Value="{Binding ProcessDone,Mode=OneWay}" Width="100" Height="20"></ProgressBar>
+            </StatusBarItem>
+            <Label Content="{Binding Status}" Height="20" Margin="0,-2,0,0" Padding="0,0,0,5"/>
+        </StatusBar>
+    </Grid>
+</Window>

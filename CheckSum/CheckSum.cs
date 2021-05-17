@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
-using Hash = System.Security.Cryptography;
 using System.Text;
+using Hash = System.Security.Cryptography;
 
 namespace CheckSumLib
 {
