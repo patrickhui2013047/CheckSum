@@ -1,7 +1,7 @@
 ﻿using Hash = System.Security.Cryptography;
 namespace PH.CheckSum
 {
-    public class SHA384 : HashProcesserBase
+    public class SHA384 : HashProcessorBase
     {
         public SHA384() : base("SHA384", false)
         {

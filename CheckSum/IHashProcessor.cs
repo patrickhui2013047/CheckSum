@@ -3,7 +3,7 @@
 namespace PH.CheckSum
 {
     public delegate void CompleteHandler();
-    public interface IHashProcesser
+    public interface IHashProcessor
     {
         Stream InputStream { get; }
         string OutString { get; }

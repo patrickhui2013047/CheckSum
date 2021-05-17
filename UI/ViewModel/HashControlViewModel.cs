@@ -6,14 +6,14 @@ namespace PH.CheckSum.UI.ViewModel
 {
     public class HashControlViewModel : ViewModelBase
     {
-        public IHashProcesser Processer;
+        public IHashProcessor Processor;
 
 
-        public string Name { get { return Processer.Name; } }
+        public string Name { get { return Processor.Name; } }
 
         public string Hash
         {
-            get { return Processer.OutString; }
+            get { return Processor.OutString; }
         }
 
         private bool _isEnable;
@@ -36,15 +36,15 @@ namespace PH.CheckSum.UI.ViewModel
         }
         public void StartCompute(byte[] input)
         {
-            Processer.StartCompute(input);
+            Processor.StartCompute(input);
         }
         public void StartCompute(Stream input)
         {
-            Processer.StartCompute(input);
+            Processor.StartCompute(input);
         }
         public void Reset()
         {
-            Processer.Reset();
+            Processor.Reset();
             OnPropertyChanged(nameof(Hash));
         }
 
@@ -60,14 +60,14 @@ namespace PH.CheckSum.UI.ViewModel
         public HashControlViewModel()
         {
             Copy = new RelayCommand(o => Copy_Clicked());
-            Processer = new MD5();
-            Processer.Complete += HashComplete;
+            Processor = new MD5();
+            Processor.Complete += HashComplete;
         }
-        public HashControlViewModel(IHashProcesser processer)
+        public HashControlViewModel(IHashProcessor processor)
         {
             Copy = new RelayCommand(o => Copy_Clicked());
-            Processer = processer;
-            Processer.Complete += HashComplete;
+            Processor = processor;
+            Processor.Complete += HashComplete;
 
         }
 

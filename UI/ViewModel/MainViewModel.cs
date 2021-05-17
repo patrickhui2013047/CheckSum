@@ -67,7 +67,7 @@ namespace PH.CheckSum.UI.ViewModel
         #region Hash Control Member
         public bool AutoCompute { get; set; }
 
-        public List<IHashProcesser> HashProcesserList = new List<IHashProcesser>();
+        public List<IHashProcessor> HashProcessorList = new List<IHashProcessor>();
         public List<HashControlViewModel> _hashControlList = new List<HashControlViewModel>();
         public ObservableCollection<HashControlViewModel> HashControlCollection { get { return new ObservableCollection<HashControlViewModel>(_hashControlList.OrderBy(item => item.IsEnable)); } }
         #endregion
@@ -305,18 +305,18 @@ namespace PH.CheckSum.UI.ViewModel
 
         public MainViewModel()
         {
-            LoadProcesser();
+            LoadProcessor();
             SetCommand();
         }
 
-        public void LoadProcesser()
+        public void LoadProcessor()
         {
             _hashControlList.Clear();
-            HashProcesserList.Clear();
-            DllLoader<IHashProcesser> dllLoader = new DllLoader<IHashProcesser>();
-            var test = (IHashProcesser)dllLoader.Types[0].GetConstructor(Type.EmptyTypes).Invoke(null);
-            dllLoader.Types.ForEach(item => HashProcesserList.Add((IHashProcesser)Activator.CreateInstance(item)));
-            HashProcesserList.ForEach(item => _hashControlList.Add(new HashControlViewModel(item)));
+            HashProcessorList.Clear();
+            DllLoader<IHashProcessor> dllLoader = new DllLoader<IHashProcessor>();
+            var test = (IHashProcessor)dllLoader.Types[0].GetConstructor(Type.EmptyTypes).Invoke(null);
+            dllLoader.Types.ForEach(item => HashProcessorList.Add((IHashProcessor)Activator.CreateInstance(item)));
+            HashProcessorList.ForEach(item => _hashControlList.Add(new HashControlViewModel(item)));
             //OnPropertyChanged(nameof(HashControlCollection));
         }
 

@@ -6,7 +6,7 @@ using Hash = System.Security.Cryptography;
 
 namespace PH.CheckSum
 {
-    public abstract class HashProcesserBase : IHashProcesser
+    public abstract class HashProcessorBase : IHashProcessor
     {
         public Stream InputStream { get; protected set; }
 
@@ -22,12 +22,12 @@ namespace PH.CheckSum
 
         private Thread thread;
 
-        public HashProcesserBase()
+        public HashProcessorBase()
         {
             OutString = string.Empty;
         }
 
-        protected HashProcesserBase(string name, bool enable = true)
+        protected HashProcessorBase(string name, bool enable = true)
         {
             Name = name;
             Enable = enable;
