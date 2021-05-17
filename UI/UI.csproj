@@ -15,8 +15,8 @@
   <ItemGroup>
     <ProjectReference Include="..\CheckSum\CheckSum.csproj" />
     <ProjectReference Include="..\DllLoader\DllLoader.csproj" />
-    <ProjectReference Include="..\MD5\MD5.csproj" />
-    <ProjectReference Include="..\SHA\SHA.csproj" />
+    <ProjectReference Include="..\Extension\MD5\MD5.csproj" />
+    <ProjectReference Include="..\Extension\SHA\SHA.csproj" />
   </ItemGroup>
 
 </Project>

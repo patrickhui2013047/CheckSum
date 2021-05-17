@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CheckSum\CheckSum.csproj" />
+    <ProjectReference Include="..\..\CheckSum\CheckSum.csproj" />
   </ItemGroup>
 
   <ItemGroup>
