@@ -47,7 +47,7 @@ namespace PH.Dll
         bool IsInheritedClasses(Type type)
         {
             //if you want the abstract classes drop the !TheType.IsAbstract but it is probably to instance so its a good idea to keep it.
-            return type.IsClass && !type.IsAbstract && (type.IsSubclassOf(typeof(TClass))||type.GetInterfaces().ToList().Contains(typeof(TClass)));
+            return type.IsClass && !type.IsAbstract && (type.IsSubclassOf(typeof(TClass)) || type.GetInterfaces().ToList().Contains(typeof(TClass)));
         }
     }
 }

@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PH.CheckSum.UI.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using PH.CheckSum.UI.ViewModel;
 namespace PH.CheckSum.UI.View
 {
     /// <summary>
@@ -19,10 +7,17 @@ namespace PH.CheckSum.UI.View
     /// </summary>
     public partial class MainView : Window
     {
+        MainViewModel ViewModel = new MainViewModel();
         public MainView()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            DataContext = ViewModel;
+
+        }
+
+        private void Window_Drop(object sender, DragEventArgs e)
+        {
+            ViewModel.ItemDroped(sender, e);
         }
     }
 }

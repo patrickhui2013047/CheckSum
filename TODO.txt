@@ -1,0 +1,15 @@
+TODO List
+
+//Change HashProcessor to thread running mode
+
+//Make Process control
+
+//Reset previous Hash output when new file selected or switching between Text and File mode
+
+//Drag&Drop support
+
+Multiple files hashing
+
+Commandline tool
+
+Make Processor less relay on System libary (Allow not pre impletemented hassh)

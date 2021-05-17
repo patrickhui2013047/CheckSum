@@ -1,19 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>PH.CheckSum</RootNamespace>
-    <AssemblyName>MD5</AssemblyName>
+    <AssemblyName>CRC</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CheckSum\CheckSum.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="MD5.cs">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-
 </Project>

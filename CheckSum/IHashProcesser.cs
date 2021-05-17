@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using Hash = System.Security.Cryptography;
+﻿using System.IO;
 
 namespace PH.CheckSum
 {
@@ -10,14 +6,17 @@ namespace PH.CheckSum
     public interface IHashProcesser
     {
         Stream InputStream { get; }
-        string OutString { get;}
+        string OutString { get; }
         string Name { get; }
         bool Enable { get; set; }
 
         event CompleteHandler Complete;
-        
+
 
         void Run(Stream inputStream);
+        void StartCompute(byte[] input);
+        void StartCompute(Stream input);
 
+        void Reset();
     }
 }

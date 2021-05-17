@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading;
 using Hash = System.Security.Cryptography;
 
 namespace PH.CheckSum
@@ -16,36 +16,90 @@ namespace PH.CheckSum
 
         public bool Enable { get; set; }
 
+        public bool IsComputing { get; set; }
+
         protected Hash.HashAlgorithm Algorithm { get; set; }
 
-        public HashProcesserBase() { }
+        private Thread thread;
+
+        public HashProcesserBase()
+        {
+            OutString = string.Empty;
+        }
 
         protected HashProcesserBase(string name, bool enable = true)
         {
             Name = name;
             Enable = enable;
+            OutString = string.Empty;
         }
 
         public event CompleteHandler Complete;
 
-        public void Run(Stream inputStream)
+        public async void Run(Stream inputStream)
         {
-            InputStream = inputStream;
-            InputStream.Position = 0;
-            var bytes = Algorithm.ComputeHash(InputStream);
-            StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < bytes.Length; i++)
+            Console.WriteLine("[{0}] is handling {1}", Thread.CurrentThread.ManagedThreadId, Name);
+            if (!IsComputing)
             {
-                builder.Append(bytes[i].ToString("x2"));
-            }
-            OutString = builder.ToString().ToUpper();
-            InputStream.Position = 0;
-            if (Complete != null)
-            {
-                Complete.Invoke();
+                IsComputing = true;
+                InputStream = inputStream;
+                InputStream.Position = 0;
+                var bytes = await Algorithm.ComputeHashAsync(InputStream);
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                OutString = builder.ToString().ToUpper();
+                InputStream.Position = 0;
+                if (Complete != null)
+                {
+                    Complete.Invoke();
+                }
+                IsComputing = false;
+                Console.WriteLine("[{0}] is ended.", Thread.CurrentThread.ManagedThreadId);
             }
         }
 
+        private void ThreadRun(object obj)
+        {
+            Run((Stream)obj);
+        }
 
+        public void StartCompute(byte[] input)
+        {
+            if (!IsComputing)
+            {
+                MemoryStream stream = new MemoryStream(input, 0, input.Length);
+                thread = new Thread(ThreadRun);
+                thread.Name = Name;
+                thread.Start(stream);
+            }
+        }
+
+        public void StartCompute(Stream stream)
+        {
+            if (!IsComputing)
+            {
+                thread = new Thread(ThreadRun);
+                thread.Name = Name;
+                thread.Start(stream);
+            }
+        }
+
+        public void Reset()
+        {
+            OutString = string.Empty;
+        }
+
+        public void ThreadHalt()
+        {
+            foreach (var d in Complete.GetInvocationList())
+            {
+                Complete -= (CompleteHandler)d;
+            }
+            //thread.Join();
+            //TODO: find a way to stop thread safty.
+        }
     }
 }

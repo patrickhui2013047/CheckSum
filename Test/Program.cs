@@ -1,8 +1,7 @@
-﻿using System;
+﻿using PH.CheckSum;
 using PH.Dll;
-using PH.CheckSum;
+using System;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace Test
 {
