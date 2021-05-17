@@ -1,4 +1,5 @@
 # CheckSum
+
 ## Change Log
 Ver 2.0-Beta
  - Refactored the project.
@@ -16,3 +17,4 @@ Ver 2.0-Beta
 It is checksum tool make by C# where has GUI and Commandline shared the same library. (Commandline is not yet completed.)
 The core library are extenable with dll, all extension should implement the interface IHashProcessor, a abstract base class HashProcessorBase is provided.
 Two example projects MD5 and SHA is provided in the Extension directory.
+
