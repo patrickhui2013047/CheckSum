@@ -117,19 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Check.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 55</value>
-  </metadata>
-  <metadata name="Text.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 131</value>
-  </metadata>
-  <metadata name="Button.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 93</value>
-  </metadata>
-  <metadata name="PanelTable.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>104, 93</value>
-  </metadata>
-  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
+  <data name="HelpContent" xml:space="preserve">
+    <value>Basic syntax
+checksum input
+input =&gt; path to file / input string (must surrounded by "")
+
+eg. checksum file.txt
+eg. checksum "Text to hash"
+
+===================================================================
+
+List algorithm
+checksum -l|-list
+list =&gt; list all aviliable hash algorithm.
+
+eg. checksum -l
+
+===================================================================
+
+Advanced syntax
+checksum input [-f|-file|-t|-text] [enabled algorithm]
+text =&gt; treat input as text. If double quotation is surrounded input, the double quotation will be ingored, only the content bounded by the double quotation will be seem as input. Cannot use with -file.
+file =&gt; treat input as file path. If double quotation is surrounded input, the double quotation will be ingored, the content bounded by the double quotation will be seem as complete file path. Cannot use with -text
+Use -list to check aviliable algorithm.
+
+eg. checksum file.txt -f -md5 -sha1
+eg. checksum "Text to hash" -md5 -sha256 -sha512
+
+===================================================================
+
+Help
+checksum -h|-help
+help =&gt; show the help menu
+eg. check -h</value>
+  </data>
 </root>
