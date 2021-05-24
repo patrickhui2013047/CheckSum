@@ -1,0 +1,32 @@
+﻿Basic syntax
+checksum input
+input => path to file / input string (must surrounded by "")
+
+eg. checksum file.txt
+eg. checksum "Text to hash"
+
+===================================================================
+
+List algorithm
+checksum -l|-list
+list => list all aviliable hash algorithm.
+
+eg. checksum -l
+
+===================================================================
+
+Advanced syntax
+checksum input [-f|-file|-t|-text] [enabled algorithm]
+text => treat input as text. If double quotation is surrounded input, the double quotation will be ingored, only the content bounded by the double quotation will be seem as input. Cannot use with -file.
+file => treat input as file path. If double quotation is surrounded input, the double quotation will be ingored, the content bounded by the double quotation will be seem as complete file path. Cannot use with -text
+Use -list to check aviliable algorithm.
+
+eg. checksum file.txt -f -md5 -sha1
+eg. checksum "Text to hash" -md5 -sha256 -sha512
+
+===================================================================
+
+Help
+checksum -h|-help
+help => show the help menu
+eg. check -h

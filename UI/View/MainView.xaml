@@ -12,15 +12,7 @@
         AllowDrop="True"
         Drop="Window_Drop"
         Title="CheckSum" Height="450" Width="800">
-    <i:Interaction.Triggers>
-        <i:EventTrigger EventName="Drop">
-            <i:InvokeCommandAction Command="{Binding ItemDrop}" PassEventArgsToCommand="True"/>
-        </i:EventTrigger>
-    </i:Interaction.Triggers>
-
-    <Window.Resources>
-        
-    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -31,7 +23,7 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0">
+        <Menu x:Name="ControlMenu" Grid.Row="0">
             <MenuItem Header="File">
                 <MenuItem Header="AutoCompute" IsCheckable="True" IsChecked="{Binding AutoCompute}"/>
             </MenuItem>

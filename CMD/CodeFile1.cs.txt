@@ -1,0 +1,10 @@
+﻿if (para.GetType() == typeof(HashParameter))
+{
+    if (IsDefault)
+    {
+        HashProcessorList.ForEach(item => item.Enable = false);
+    }
+    IsDefault = false;
+    var name = ((HashParameter)para).FullName;
+    HashProcessorList.Find(item => item.Name == name).Enable = true;
+}
