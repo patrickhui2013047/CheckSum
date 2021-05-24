@@ -38,7 +38,7 @@ namespace PH.CheckSum.UI.ViewModel
         public string Text
         {
             get { return _text; }
-            set 
+            set
             {
                 _text = value;
                 OnPropertyChanged(nameof(Text));
@@ -233,7 +233,7 @@ namespace PH.CheckSum.UI.ViewModel
                     Hash = Clipboard.GetText();
                 }
             });
-            PlasteText = new RelayCommand(o => 
+            PlasteText = new RelayCommand(o =>
             {
                 if (Clipboard.ContainsText())
                 {
@@ -267,7 +267,8 @@ namespace PH.CheckSum.UI.ViewModel
                 {
                     ComputeHash();
                 }
-            }else if (e.Data.GetDataPresent(DataFormats.UnicodeText))
+            }
+            else if (e.Data.GetDataPresent(DataFormats.UnicodeText))
             {
                 e.Effects = DragDropEffects.Copy;
                 var data = (string)e.Data.GetData(DataFormats.UnicodeText);
@@ -320,10 +321,5 @@ namespace PH.CheckSum.UI.ViewModel
             //OnPropertyChanged(nameof(HashControlCollection));
         }
 
-        public byte[] ReadToEnd(MemoryStream stream)
-        {
-
-            return stream.ToArray();
-        }
     }
 }

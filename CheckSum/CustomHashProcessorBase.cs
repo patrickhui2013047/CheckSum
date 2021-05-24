@@ -2,11 +2,17 @@
 using System.IO;
 using System.Text;
 using System.Threading;
-using Hash = System.Security.Cryptography;
+using System.Threading.Tasks;
 
 namespace PH.CheckSum
 {
-    public abstract class HashProcessorBase : IHashProcessor
+    public interface IHashAlgorithm
+    {
+        Task<byte[]> ComputeHashAsync(Stream InputStream);
+    }
+
+
+    public class CustomHashProcessorBase : IHashProcessor
     {
         public Stream InputStream { get; protected set; }
 
@@ -18,16 +24,16 @@ namespace PH.CheckSum
 
         public bool IsComputing { get; set; }
 
-        protected Hash.HashAlgorithm Algorithm { get; set; }
+        protected IHashAlgorithm Algorithm { get; set; }
 
         private Thread thread;
 
-        public HashProcessorBase()
+        public CustomHashProcessorBase()
         {
             OutString = string.Empty;
         }
 
-        protected HashProcessorBase(string name, bool enable = true)
+        protected CustomHashProcessorBase(string name, bool enable = true)
         {
             Name = name;
             Enable = enable;
@@ -38,7 +44,7 @@ namespace PH.CheckSum
 
         public async void Run(Stream inputStream)
         {
-            //Console.WriteLine("[{0}] is handling {1}", Thread.CurrentThread.ManagedThreadId, Name);
+            Console.WriteLine("[{0}] is handling {1}", Thread.CurrentThread.ManagedThreadId, Name);
             if (!IsComputing)
             {
                 IsComputing = true;
@@ -57,7 +63,7 @@ namespace PH.CheckSum
                     Complete.Invoke();
                 }
                 IsComputing = false;
-                //Console.WriteLine("[{0}] is ended.", Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine("[{0}] is ended.", Thread.CurrentThread.ManagedThreadId);
             }
         }
 
